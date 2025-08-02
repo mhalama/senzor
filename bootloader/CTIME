@@ -1,0 +1,3 @@
+Github pro clanek k publikaci v Amaru.
+
+Bootloader prijima program vysilany pres IR. Bootloader zacina na adrese 1D00 a nespousti se automaticky po restartu, ale spousti si ho uzivatelsky program, kdyz uzna za vhodne.

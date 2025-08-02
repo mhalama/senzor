@@ -1,0 +1,23 @@
+
+                                    .-----------------.
+                                    |    ATTINY84     |
+                                ----| 1  VCC    GND 14|---- 
+                      RF433 out ----| 2  PB0    PA0 13|---- 
+                      DEBUG led ----| 3  PB1    PA1 12|---- PIR
+                          RESET ----| 4  PB3    PA2 11|---- RCWL
+                          IR in ----| 5  PB2    PA3 10|---- 
+                                ----| 6  PA7    PA4  9|---- 
+                                ----| 7  PA6    PA5  8|---- AM2302
+                                    '-----------------'
+
+Pokud je instalovan IR receiver, lze se prepnou do bootloaderu take poslanim prikazu: echo -n "BOOT" | ncat 192.168.15.197 9998
+
+Bootloader je take aktivovan po RESETu mcu pinem.
+
+RF433 ani komunikace s AM2302 vysilac nevyuzivaji preruseni.
+
+ID=10 : zatim volna
+ID=11 : zatim volna
+ID=12 : LiOn, PIR, RCWL, AM2302
+ID=13 : zatim volna
+ID=14 : zatim volna
